@@ -86,7 +86,7 @@ const extraMetadata = {};
 
 const rarityDelimiter = "#";
 
-const uniqueDnaTorrance = 100000;
+const uniqueDnaTorrance = 1000000;
 
 const preview = {
   thumbPerRow: 5,

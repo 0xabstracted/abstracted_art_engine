@@ -1,0 +1,31 @@
+{
+    "namePrefix": "Tars 'n Case",
+    "description": "Robots on a mission to explore every corner of the Universe to enhance the development of Solana",
+    "symbol":"TnC",
+    "seller_fee_basis_points": 250,
+    "creators": [
+        {
+          "address": "abSzV5zXTKCbkjzN2hzrg2BPTbkYAQ7tt4jQPett2jX",
+          "share": 90
+        },
+        {
+            "address": "om1rBL3aBQhQARsiQKopcao2YhyFr7bfrj23rmsDCgp",
+            "share": 10
+        }
+    ],
+    "layerConfigurations": [
+    {
+      "growEditionSizeTo": 10000,
+      "layersOrder": [
+        { "name": "Background" },
+        { "name": "Planets" },
+        { "name": "Surface" },
+        { "name": "Robots" },
+        { "name": "Misc" }
+      ]
+    }
+  ],
+    "width": 4096,
+    "height": 4096,
+    "smoothing": true
+}
