@@ -3,8 +3,8 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const fs = require("fs");
 const sha1 = require(`${basePath}/node_modules/sha1`);
 const { createCanvas, loadImage } = require(`${basePath}/node_modules/canvas`);
-const buildDir = basePath + '/' + process.argv[3] ;
-const layersDir = basePath + '/' + process.argv[4] ;
+const layersDir = basePath + "/" + process.argv[3];
+const buildDir = basePath + "/" + process.argv[4];
 // const layersDir = `${basePath}/layers`;
 const {
   format,
@@ -21,7 +21,7 @@ const {
   namePrefix,
   network,
   solanaMetadata,
-  gif
+  gif,
 } = require(`${basePath}/src/config.js`);
 const canvas = createCanvas(format.width, format.height);
 const ctx = canvas.getContext("2d");
@@ -35,13 +35,14 @@ const HashlipsGiffer = require(`${basePath}/modules/HashlipsGiffer.js`);
 let hashlipsGiffer = null;
 const buildSetup = (buDir, layDir) => {
   if (fs.existsSync(buildDir)) {
-    fs.rmdirSync(buildDir, { recursive: true });
-  }
-  fs.mkdirSync(buildDir);
-  fs.mkdirSync(`${buildDir}/json`);
-  fs.mkdirSync(`${buildDir}/images`);
-  if (gif.export) {
-    fs.mkdirSync(`${buildDir}/gifs`);
+    // fs.rmdirSync(buildDir, { recursive: true });
+  } else {
+    fs.mkdirSync(buildDir);
+    fs.mkdirSync(`${buildDir}/json`);
+    fs.mkdirSync(`${buildDir}/images`);
+    if (gif.export) {
+      fs.mkdirSync(`${buildDir}/gifs`);
+    }
   }
 };
 
@@ -118,7 +119,8 @@ const saveImage = (_editionCount) => {
 };
 
 const genColor = () => {
-  let hue = Math.floor(Math.random() * 360);
+  // let hue = Math.floor(Math.random() * 360);
+  let hue = 0;
   let pastel = `hsl(${hue}, 100%, ${background.brightness})`;
   return pastel;
 };
@@ -191,7 +193,7 @@ const loadLayerImg = async (_layer) => {
 };
 
 const addText = (_sig, x, y, size) => {
-  ctx.fillStyle = text.color;
+  //ctx.fillStyle = text.color;
   ctx.font = `${text.weight} ${size}pt ${text.family}`;
   ctx.textBaseline = text.baseline;
   ctx.textAlign = text.align;
@@ -244,6 +246,16 @@ const constructLayerToDna = (_dna = "", _layers = []) => {
  */
 const filterDNAOptions = (_dna) => {
   const dnaItems = _dna.split(DNA_DELIMITER);
+  //console.log(dnaItems);
+  // if (dnaItems[2] == '1:Human#90.png' && dnaItems[7] == '20:Shirtless#35.png') {
+  //   return false;
+  // }
+  // else if ((dnaItems[4].indexOf('0:Astronaut#3979.png') > -1 || dnaItems[4].indexOf('2:Balaclava#1001.png') > -1 || dnaItems[4].indexOf('11:CycHelmet#3979.png') > -1 || dnaItems[4].indexOf('19:Ninja#1001.png') > -1) || dnaItems[4].indexOf('22:Skaterboi#3979.png') > -1){
+  // // console.log(dnaItems);
+  // dnaItems[3] = '0:Empty#461.png';
+  // }
+
+  //console.log(dnaItems);
   const filteredDNA = dnaItems.filter((element) => {
     const query = /(\?.*$)/;
     const querystring = query.exec(element);
@@ -276,6 +288,10 @@ const removeQueryStrings = (_dna) => {
 
 const isDnaUnique = (_DnaList = new Set(), _dna = "") => {
   const _filteredDNA = filterDNAOptions(_dna);
+  if (!_filteredDNA) {
+    console.log("1");
+    return false;
+  }
   return !_DnaList.has(_filteredDNA);
 };
 
@@ -383,7 +399,7 @@ const startCreating = async () => {
             hashlipsGiffer.start();
           }
           if (background.generate) {
-            drawBackground();
+            //drawBackground();
           }
           renderObjectArray.forEach((renderObject, index) => {
             drawElement(

@@ -2,8 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const { createCanvas, loadImage } = require("canvas");
 const basePath = process.cwd();
-const buildDir = `${basePath}/build/json`;
-const inputDir = `${basePath}/build/images`;
+const buildPathMain = basePath + '/' + process.argv[4];
+const buildDir = `${basePath}/${buildPathMain}/json`;
+const inputDir = `${basePath}/${buildPathMain}/images`;
 const {
   format,
   namePrefix,
@@ -16,10 +17,17 @@ const ctx = canvas.getContext("2d");
 const metadataList = [];
 
 const buildSetup = () => {
+  // if (fs.existsSync(buildDir)) {
+  //   fs.rmdirSync(buildDir, { recursive: true });
+  // }
+  // fs.mkdirSync(buildDir);
   if (fs.existsSync(buildDir)) {
-    fs.rmdirSync(buildDir, { recursive: true });
+    // fs.rmdirSync(buildDir, { recursive: true });
   }
-  fs.mkdirSync(buildDir);
+  else{
+    fs.mkdirSync(buildDir);
+    fs.mkdirSync(`${buildDir}/json`);
+  }
 };
 
 const getImages = (_dir) => {

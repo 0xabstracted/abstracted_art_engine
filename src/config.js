@@ -2,7 +2,7 @@ const basePath = process.cwd();
 const { MODE } = require(`${basePath}/constants/blend_mode.js`);
 const { NETWORK } = require(`${basePath}/constants/network.js`);
 let key = process.argv[2] ;
-const configCustom = require(basePath + '/' + key + '/config.json');
+const configCustom = require(basePath + '/' + key );
 const network = NETWORK.sol;
 
 // General metadata for Solana NFTs
@@ -17,31 +17,13 @@ const solanaMetadata = {
   seller_fee_basis_points: configCustom.seller_fee_basis_points, // Define how much % you want from secondary market sales 1000 = 10%
   external_url: configCustom.external_url,
   creators: configCustom.creators,
-  // creators: [
-  //   {
-  //     address: "abSzV5zXTKCbkjzN2hzrg2BPTbkYAQ7tt4jQPett2jX",
-  //     share: 100,
-  //   },
-  // ],
 };
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = configCustom.layerConfigurations;
-// const layerConfigurations = [
-//   {
-//     growEditionSizeTo: configCustom.growEditionSizeTo,
-//     // layersOrder: [
-//     //   { name: "Background" },
-//     //   { name: "Planets" },
-//     //   { name: "Surface" },
-//     //   { name: "Robots" },
-//     //   { name: "Misc" },
-//     // ],
-//     layersOrder: configCustom.layersOrder
-//   }
-// ];
 
-const shuffleLayerConfigurations = false;
+const shuffleLayerConfigurations = configCustom.shuffleLayerConfigurations;
+// const shuffleLayerConfigurations = false;
 
 const debugLogs = false;
 

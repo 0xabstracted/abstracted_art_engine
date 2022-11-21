@@ -1,0 +1,30 @@
+{
+  "namePrefix": "Presley Test",
+  "description": "Test",
+  "symbol": "PT",
+  "seller_fee_basis_points": 1000,
+  "creators": [
+    {
+      "address": "om1rBL3aBQhQARsiQKopcao2YhyFr7bfrj23rmsDCgp",
+      "share": 100
+    }
+  ],
+  "layerConfigurations": [
+    {
+      "growEditionSizeTo": 500,
+      "layersOrder": [
+        { "name": "Background" },
+        { "name": "Base" },
+        { "name": "Bottom" },
+        { "name": "Eyes" },
+        { "name": "Hair" },
+        { "name": "Shoes" },
+        { "name": "Top" }
+      ]
+    }
+  ],
+  "shuffleLayerConfigurations": false,
+  "width": 1656,
+  "height": 2520,
+  "smoothing": true
+}

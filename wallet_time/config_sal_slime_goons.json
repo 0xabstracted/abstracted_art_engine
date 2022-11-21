@@ -1,0 +1,40 @@
+{
+    "namePrefix": "Secret Alpha Labs x Slime Goons",
+    "description": "A collection of 500 collaborative art between Secret Alpha Labs and Slime Goons providing unique utilities in both communities.",
+    "symbol":"SALSLG",
+    "seller_fee_basis_points": 1000,
+    "creators": [
+      {
+        "address": "23UdYkPtCMuZbLF8M3VjwuVGrguo8xAdwqJGuBpffTVb",
+        "share": 50
+      },
+      {
+        "address": "ryaNsMVq6FaS4oYT6gXxKsPEzGqryWmMb2PQKABsSRX",
+        "share": 40
+      },
+      {
+        "address": "om1rBL3aBQhQARsiQKopcao2YhyFr7bfrj23rmsDCgp",
+        "share": 10
+      }
+    ],
+    "layerConfigurations": [
+      {
+        "growEditionSizeTo": 501,
+        "layersOrder": [
+          { "name": "Background" },
+          { "name": "Back Fire" },
+          { "name": "Skin" },
+          { "name": "Eyes" },
+          { "name": "Hat" },
+          { "name": "Shirt" },
+          { "name": "Chain" },
+          { "name": "Mouth" }
+        ]
+      }
+    
+  ],
+    "shuffleLayerConfigurations": false,
+    "width": 512,
+    "height": 512,
+    "smoothing": true
+}

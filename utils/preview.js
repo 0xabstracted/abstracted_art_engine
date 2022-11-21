@@ -1,5 +1,5 @@
 const basePath = process.cwd();
-const buildDir = basePath + '/' + process.argv[3] ;
+const buildDir = basePath + '/' + process.argv[4] ;
 const fs = require("fs");
 const { createCanvas, loadImage } = require("canvas");
 //const buildDir = `${basePath}/build`;

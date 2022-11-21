@@ -1,0 +1,46 @@
+{
+    "namePrefix": "SAL Devnet 420",
+    "description": "SALD4",
+    "symbol":"SALD4",
+    "seller_fee_basis_points": 250,
+    "creators": [
+        {
+          "address": "ryaNsMVq6FaS4oYT6gXxKsPEzGqryWmMb2PQKABsSRX",
+          "share": 100
+        }
+    ],
+    "layerConfigurations": [
+      {
+        "growEditionSizeTo": 42,
+        "layersOrder": [
+          { "name": "Background" },
+          { "name": "Weapons" },
+          { "name": "BaseBody" },
+          { "name": "Oculus" },
+          { "name": "Head" },
+          { "name": "Pants" },
+          { "name": "Shoes" },
+          { "name": "Torso" },
+          { "name": "Pets" }
+        ]
+      },
+      {
+        "growEditionSizeTo": 420,
+        "layersOrder": [
+          { "name": "Background" },
+          { "name": "Weapons" },
+          { "name": "BaseBody" },
+          { "name": "Oculus" },
+          { "name": "Head" },
+          { "name": "Pants" },
+          { "name": "Shoes" },
+          { "name": "Torso" }
+        ]
+      }
+    
+  ],
+    "shuffleLayerConfigurations": false,
+    "width": 512,
+    "height": 512,
+    "smoothing": true
+}

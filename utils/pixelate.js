@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const { createCanvas, loadImage } = require("canvas");
 const basePath = process.cwd();
-const buildDir_p = basePath + '/' + process.argv[3] ;
+const buildDir_p = basePath + '/' + process.argv[4] ;
 const buildDir = `${buildDir_p}/pixel_images`;
 const inputDir = `${buildDir_p}/images`;
 // const buildDir = `${basePath}/build/pixel_images`;
@@ -13,10 +13,22 @@ const canvas = createCanvas(format.width, format.height);
 const ctx = canvas.getContext("2d");
 
 const buildSetup = () => {
+  // if (fs.existsSync(buildDir)) {
+  //   fs.rmdirSync(buildDir, { recursive: true });
+  // }
+  // fs.mkdirSync(buildDir);
+
   if (fs.existsSync(buildDir)) {
-    fs.rmdirSync(buildDir, { recursive: true });
+    // fs.rmdirSync(buildDir, { recursive: true });
   }
-  fs.mkdirSync(buildDir);
+  else{
+    fs.mkdirSync(buildDir);
+    fs.mkdirSync(`${buildDir}/json`);
+    fs.mkdirSync(`${buildDir}/images`);
+    if (gif.export) {
+      fs.mkdirSync(`${buildDir}/gifs`);
+    }
+  }
 };
 
 const getImages = (_dir) => {

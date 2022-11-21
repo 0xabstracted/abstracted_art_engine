@@ -1,0 +1,38 @@
+{
+    "namePrefix": "Secret Alpha Labs x Senshi",
+    "description": "A collection of 500 collaborative art between Secret Alpha Labs and Senshi Degen DAO providing unique utilities in both communities.",
+    "symbol":"SALSEN",
+    "seller_fee_basis_points": 1000,
+    "creators": [
+      {
+        "address": "9hNdhn6XXWApBZoue8po3UevA3wx4PTEVXnT7WQ7aM7p",
+        "share": 50
+      },
+      {
+        "address": "E2NyWnSHgTJ69h24fYabjWt6HK23AsUmtynRFWKNcca2",
+        "share": 40
+      },
+      {
+        "address": "om1rBL3aBQhQARsiQKopcao2YhyFr7bfrj23rmsDCgp",
+        "share": 10
+      }
+    ],
+    "layerConfigurations": [
+      {
+        "growEditionSizeTo": 501,
+        "layersOrder": [
+          { "name": "background" },
+          { "name": "weapon" },
+          { "name": "body" },
+          { "name": "mask" },
+          { "name": "head wear" },
+          { "name": "shirt" }
+        ]
+      }
+    
+  ],
+    "shuffleLayerConfigurations": false,
+    "width": 1024,
+    "height": 1024,
+    "smoothing": true
+}

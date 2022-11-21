@@ -1,0 +1,63 @@
+{
+    "namePrefix": "Secret Alpha Labs x Eeries",
+    "description": "A collection of 500 collaborative art between Secret Alpha Labs and Eeries providing unique utilities in both communities.",
+    "symbol":"SALEER",
+    "seller_fee_basis_points": 1000,
+    "creators": [
+      {
+        "address": "3Noafd1SaLadJfWMgfNsmaFpwWcyhUsNDsKPupFaAREQ",
+        "share": 50
+      },
+      {
+        "address": "ryaNsMVq6FaS4oYT6gXxKsPEzGqryWmMb2PQKABsSRX",
+        "share": 40
+      },
+      {
+        "address": "om1rBL3aBQhQARsiQKopcao2YhyFr7bfrj23rmsDCgp",
+        "share": 10
+      }
+    ],
+    "layerConfigurations": [
+      {
+        "growEditionSizeTo": 100,
+        "layersOrder": [
+          { "name": "Base" },
+          { "name": "Weapons" },
+          { "name": "Body" },
+          { "name": "Masks" }
+        ]
+      },
+      {
+        "growEditionSizeTo": 200,
+        "layersOrder": [
+          { "name": "Background" },
+          { "name": "Base" },
+          { "name": "Weapons" },
+          { "name": "Body" },
+          { "name": "Masks" }
+        ]
+      },
+      {
+        "growEditionSizeTo": 350,
+        "layersOrder": [
+          { "name": "Base" },
+          { "name": "Weapons" },
+          { "name": "Body" }
+        ]
+      },
+      {
+        "growEditionSizeTo": 501,
+        "layersOrder": [
+          { "name": "Background" },
+          { "name": "Base" },
+          { "name": "Weapons" },
+          { "name": "Body" }
+        ]
+      }
+    
+  ],
+    "shuffleLayerConfigurations": false,
+    "width": 1024,
+    "height": 1024,
+    "smoothing": true
+}

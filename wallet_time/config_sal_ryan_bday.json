@@ -1,0 +1,33 @@
+{
+    "namePrefix": "Ryan - The Warrior",
+    "description": "Happy Birthday Ryann!!",
+    "symbol":"RYAN",
+    "seller_fee_basis_points": 0,
+    "creators": [
+        {
+          "address": "ryaNsMVq6FaS4oYT6gXxKsPEzGqryWmMb2PQKABsSRX",
+          "share": 100
+        }
+    ],
+    "layerConfigurations": [
+      {
+        "growEditionSizeTo": 1,
+        "layersOrder": [
+          { "name": "Background" },
+          { "name": "Weapons" },
+          { "name": "BaseBody" },
+          { "name": "Oculus" },
+          { "name": "Head" },
+          { "name": "Pants" },
+          { "name": "Shoes" },
+          { "name": "Torso" },
+          { "name": "Pets" }
+        ]
+      }
+    
+  ],
+    "shuffleLayerConfigurations": false,
+    "width": 2048,
+    "height": 2048,
+    "smoothing": true
+}
